@@ -1,4 +1,4 @@
-# simulation testing for ss3 models using ss3sim - wales - lobster
+# simulation testing for the stock assessment model of European lobster in Welsh waters
 
 # a.OM scenarios
 # 1.varying fishing mortality (F:high, low)
