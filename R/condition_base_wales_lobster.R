@@ -32,7 +32,7 @@ condition_base <- function(fore_base=fore_base,
                            datfile="ss3.dat", 
                            ctlfile="ss3.ctl" ,
                            fleet_catch=c(2:8), 
-                           fleet_cpue=c(1,3,4,5,8,9), 
+                           fleet_cpue=unique(dat_base$CPUE$index), 
                            fleet_discard=c(1,2,3), 
                            len_sex=3, 
                            len_Nsamp=1, 
@@ -42,7 +42,8 @@ condition_base <- function(fore_base=fore_base,
                            fleet_target=c(3, 4, 5), 
                            fleet_bycatch=c(7, 8), 
                            fleet_prerecruit=9,
-                           len_part=c(0), 
+                           fleet_len <- unique(dat_base$lencomp$fleet),
+                           len_part=c(0), # 0=all; 1=discard; 2=retained
                            F_Method=2,
                            overwrite=TRUE) {
   
@@ -66,14 +67,6 @@ condition_base <- function(fore_base=fore_base,
   cat("addtocomp:"); print(dat_base$len_info$addtocomp) 
 
   # expand time series for the sim years 
-  fleet_obs <- fleet_obs
-  fleet_historical <- fleet_historical
-  fleet_target <- fleet_target
-  fleet_bycatch <- fleet_bycatch
-  fleet_prerecruit <- fleet_prerecruit
-  fleet_len <- unique(dat_base$lencomp$fleet) 
-  len_part <- len_part # 0=all; 1=discard; 2=retained
-  
   # catch
   catch_expand <- NULL
   for (fleet in fleet_catch) { # fleet# to update
