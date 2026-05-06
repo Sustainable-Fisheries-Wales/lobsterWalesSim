@@ -8,14 +8,14 @@ R: This folder contains R files for data processing and model-fitting
 
 `simtest_wales_lobster.R`: a script for running simulation testing
 
-`condition_base_wales_lobster.R`: a script for conditioning OM based on the assessment model
+`condition_base_wales_lobster.R`: a function for conditioning OM based on the assessment model
 
-`update_om_wales_lobster.R`: a script for updating OM (sigmaR and F)
+`update_om_wales_lobster.R`: a function for updating OM (sigmaR and F)
 
-`update_em_wales_lobster.R`: a script for updating EM (model mispecification)
+`update_em_wales_lobster.R`: a function for updating EM (model mispecification)
 
-`om_scenarios_wales_lobster.R`: a script for specifying OM scenarios
+`om_scenarios_wales_lobster.R`: a function for specifying OM scenarios
 
-`em_scenarios_wales_lobster.R`: a script for specifying EM scenarios
+`em_scenarios_wales_lobster.R`: a function for specifying EM scenarios
 
-`generate_om_em_id.R`: a script for generating a scenario ID for OM & EM combinations
+`generate_om_em_id.R`: a function for generating a scenario ID for OM & EM combinations
